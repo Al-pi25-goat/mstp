@@ -12,7 +12,7 @@ public class Main extends Thread {
             while (true) {
                 Socket s = ss.accept();
                 System.out.println("WELCOME");
-                mioThread t = new mioThread();
+                mioThread t = new mioThread(s);
                 t.start();
             }
         }
